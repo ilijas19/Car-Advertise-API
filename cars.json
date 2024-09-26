@@ -1,0 +1,114 @@
+[
+  {
+    "model": "A4",
+    "make": "Audi",
+    "price": 12000,
+    "year": 2019,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "X5",
+    "make": "BMW",
+    "price": 15000,
+    "year": 2021,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Mustang",
+    "make": "Ford",
+    "price": 20000,
+    "year": 2022,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Civic",
+    "make": "Honda",
+    "price": 10000,
+    "year": 2018,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Corolla",
+    "make": "Toyota",
+    "price": 9000,
+    "year": 2020,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Model S",
+    "make": "Tesla",
+    "price": 35000,
+    "year": 2021,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Camry",
+    "make": "Toyota",
+    "price": 15000,
+    "year": 2019,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Accord",
+    "make": "Honda",
+    "price": 13000,
+    "year": 2020,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Charger",
+    "make": "Dodge",
+    "price": 25000,
+    "year": 2021,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Golf",
+    "make": "Volkswagen",
+    "price": 9000,
+    "year": 2017,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "911",
+    "make": "Porsche",
+    "price": 50000,
+    "year": 2022,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "S-Class",
+    "make": "Mercedes-Benz",
+    "price": 45000,
+    "year": 2021,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Range Rover",
+    "make": "Land Rover",
+    "price": 55000,
+    "year": 2022,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Q5",
+    "make": "Audi",
+    "price": 17000,
+    "year": 2020,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "CX-5",
+    "make": "Mazda",
+    "price": 12000,
+    "year": 2019,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  },
+  {
+    "model": "Impreza",
+    "make": "Subaru",
+    "price": 14000,
+    "year": 2020,
+    "createdBy": "66f47436c72e347eb5f5d202"
+  }
+]

@@ -1,0 +1,220 @@
+openapi: 3.0.0
+info:
+  title: Cars API
+  description: API for managing cars and user accounts.
+  version: 1.0.0
+servers:
+  - url: "{{URL}}"
+tags:
+  - name: Users
+    description: Operations related to user accounts
+  - name: Cars
+    description: Operations related to car listings
+
+paths:
+  /users/login:
+    post:
+      tags:
+        - Users
+      summary: User Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "ilija@gmail.com"
+                password:
+                  type: string
+                  example: "secret"
+      responses:
+        "200":
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jwt:
+                    type: string
+
+  /users/register:
+    post:
+      tags:
+        - Users
+      summary: User Registration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Ilija"
+                email:
+                  type: string
+                  example: "ilija1@gmail.com"
+                password:
+                  type: string
+                  example: "secret"
+      responses:
+        "200":
+          description: Successful registration
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jwt:
+                    type: string
+
+  /cars:
+    get:
+      tags:
+        - Cars
+      summary: Get All Cars
+      parameters:
+        - name: make
+          in: query
+          required: false
+          schema:
+            type: string
+            example: "Audi"
+        - name: model
+          in: query
+          required: false
+          schema:
+            type: string
+            example: "a"
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+            example: "-price"
+        - name: numericFilters
+          in: query
+          required: false
+          schema:
+            type: string
+            example: "price=9000"
+      responses:
+        "200":
+          description: A list of cars
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    model:
+                      type: string
+                    make:
+                      type: string
+                    price:
+                      type: number
+                    year:
+                      type: number
+
+    post:
+      tags:
+        - Cars
+      summary: Create a Car
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                model:
+                  type: string
+                  example: "RS7"
+                make:
+                  type: string
+                  example: "Audi"
+                price:
+                  type: number
+                  example: 14000
+                year:
+                  type: number
+                  example: 2020
+      responses:
+        "201":
+          description: Car created successfully
+
+  /cars/{id}:
+    get:
+      tags:
+        - Cars
+      summary: Get Single Car
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A single car
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  model:
+                    type: string
+                  make:
+                    type: string
+                  price:
+                    type: number
+                  year:
+                    type: number
+
+    patch:
+      tags:
+        - Cars
+      summary: Update Car
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                  example: "Audi RS7 in excellent shape, registered until 2024"
+      responses:
+        "200":
+          description: Car updated successfully
+
+    delete:
+      tags:
+        - Cars
+      summary: Delete Car
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Car deleted successfully
