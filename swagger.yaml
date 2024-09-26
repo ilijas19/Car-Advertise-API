@@ -4,7 +4,7 @@ info:
   description: API for managing cars and user accounts.
   version: 1.0.0
 servers:
-  - url: "{{URL}}"
+  - url: "https://car-advertise-api.onrender.com/api/v1"
 tags:
   - name: Users
     description: Operations related to user accounts
