@@ -11,6 +11,13 @@ tags:
   - name: Cars
     description: Operations related to car listings
 
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
 paths:
   /users/login:
     post:
@@ -123,6 +130,8 @@ paths:
                       type: number
                     year:
                       type: number
+      security:
+        - bearerAuth: [] # Require bearer token for this endpoint
 
     post:
       tags:
@@ -150,6 +159,8 @@ paths:
       responses:
         "201":
           description: Car created successfully
+      security:
+        - bearerAuth: [] # Require bearer token for this endpoint
 
   /cars/{id}:
     get:
@@ -180,6 +191,8 @@ paths:
                     type: number
                   year:
                     type: number
+      security:
+        - bearerAuth: [] # Require bearer token for this endpoint
 
     patch:
       tags:
@@ -204,6 +217,8 @@ paths:
       responses:
         "200":
           description: Car updated successfully
+      security:
+        - bearerAuth: [] # Require bearer token for this endpoint
 
     delete:
       tags:
@@ -218,3 +233,5 @@ paths:
       responses:
         "204":
           description: Car deleted successfully
+      security:
+        - bearerAuth: [] # Require bearer token for this endpoint
